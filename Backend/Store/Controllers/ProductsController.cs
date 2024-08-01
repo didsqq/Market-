@@ -27,15 +27,15 @@ namespace Store.Controllers
         public async Task<ActionResult<Guid>> CreateProduct([FromBody] ProductsRequest request)
         {
             /*            var (product, error) = Product.Create(
-                            Guid.NewGuid(),
-                            request.Title,
-                            request.Description,
-                            request.Price);
+                Guid.NewGuid(),
+                request.Title,
+                request.Description,
+                request.Price);
 
-                        if (!string.IsNullOrEmpty(error))
-                        {
-                            return BadRequest(error);
-                        }*/
+            if (!string.IsNullOrEmpty(error))
+            {
+                return BadRequest(error);
+            }*/
             var product = Product.Create(Guid.NewGuid(), request.Title, request.Description, request.Price);
 
             var productId = await _productsService.CreateProduct(product.Value);

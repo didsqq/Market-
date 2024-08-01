@@ -26,3 +26,4 @@ C:\Users\Адель\Desktop\Store\Backend\Store.Core\obj\Debug\net8.0\refint\Sto
 C:\Users\Адель\Desktop\Store\Backend\Store.Core\obj\Debug\net8.0\Store.Core.pdb
 C:\Users\Адель\Desktop\Store\Backend\Store.Core\obj\Debug\net8.0\Store.Core.genruntimeconfig.cache
 C:\Users\Адель\Desktop\Store\Backend\Store.Core\obj\Debug\net8.0\ref\Store.Core.dll
+C:\Users\Адель\Desktop\Store\Backend\Store.Core\obj\Debug\net8.0\Store.Core.sourcelink.json

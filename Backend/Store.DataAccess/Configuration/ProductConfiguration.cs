@@ -11,6 +11,9 @@ namespace Store.DataAccess.Configuration
         {
             builder.HasKey(x => x.Id);
 
+            builder.HasOne(a => a.Image)
+                .WithOne(c => c.Product);
+
             builder.Property(b => b.Title)
                 .HasMaxLength(Product.MAX_TITLE_LENGTH)
                 .IsRequired();

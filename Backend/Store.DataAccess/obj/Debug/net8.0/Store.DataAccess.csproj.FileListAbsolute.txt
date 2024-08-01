@@ -32,3 +32,4 @@ C:\Users\Адель\Desktop\Store\Backend\Store.DataAccess\obj\Debug\net8.0\refi
 C:\Users\Адель\Desktop\Store\Backend\Store.DataAccess\obj\Debug\net8.0\Store.DataAccess.pdb
 C:\Users\Адель\Desktop\Store\Backend\Store.DataAccess\obj\Debug\net8.0\Store.DataAccess.genruntimeconfig.cache
 C:\Users\Адель\Desktop\Store\Backend\Store.DataAccess\obj\Debug\net8.0\ref\Store.DataAccess.dll
+C:\Users\Адель\Desktop\Store\Backend\Store.DataAccess\obj\Debug\net8.0\Store.DataAccess.sourcelink.json

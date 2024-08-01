@@ -32,3 +32,4 @@ C:\Users\Адель\Desktop\Store\Backend\Store.Application\obj\Debug\net8.0\Sto
 C:\Users\Адель\Desktop\Store\Backend\Store.Application\obj\Debug\net8.0\refint\Store.Application.dll
 C:\Users\Адель\Desktop\Store\Backend\Store.Application\obj\Debug\net8.0\Store.Application.pdb
 C:\Users\Адель\Desktop\Store\Backend\Store.Application\obj\Debug\net8.0\ref\Store.Application.dll
+C:\Users\Адель\Desktop\Store\Backend\Store.Application\obj\Debug\net8.0\Store.Application.sourcelink.json

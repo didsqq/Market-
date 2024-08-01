@@ -221,3 +221,4 @@ C:\Users\Адель\Desktop\Store\Backend\Store\obj\Debug\net8.0\Store.pdb
 C:\Users\Адель\Desktop\Store\Backend\Store\obj\Debug\net8.0\Store.genruntimeconfig.cache
 C:\Users\Адель\Desktop\Store\Backend\Store\obj\Debug\net8.0\ref\Store.dll
 C:\Users\Адель\Desktop\Store\Backend\Store\bin\Debug\net8.0\CSharpFunctionalExtensions.dll
+C:\Users\Адель\Desktop\Store\Backend\Store\obj\Debug\net8.0\Store.sourcelink.json
