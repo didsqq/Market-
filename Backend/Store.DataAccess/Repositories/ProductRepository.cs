@@ -18,7 +18,7 @@ namespace Store.DataAccess.Repositories
                 .AsNoTracking()
                 .ToListAsync();
             var products = productEntities
-                .Select(b => Product.Create(b.Id, b.Title, b.Description, b.Price).Value)
+                .Select(b => Product.Create(b.Id, b.Title, b.Description, b.Price, b.ImageId).Value)
                 .ToList();
 
             return products;
@@ -32,6 +32,7 @@ namespace Store.DataAccess.Repositories
                 Title = product.Title,
                 Description = product.Description,
                 Price = product.Price,
+                ImageId = product.ImageId
             };
 
             await _context.Products.AddAsync(productEntity);
@@ -41,14 +42,6 @@ namespace Store.DataAccess.Repositories
         }
         public async Task<Guid> Update(Guid id, string title, string description, decimal price)
         {
-/*            var product = await _context.Products.FirstOrDefaultAsync(b => b.Id == id);
-            if (product != null)
-            {
-                product.Title = title;
-                product.Description = description;
-                product.Price = price;
-                await _context.SaveChangesAsync();
-            }*/
             await _context.Products
                 .Where(b => b.Id == id)
                 .ExecuteUpdateAsync(s => s
@@ -60,17 +53,28 @@ namespace Store.DataAccess.Repositories
         }
         public async Task<Guid> Delete(Guid id)
         {
-/*            var product = await _context.Products.FirstOrDefaultAsync(b => b.Id == id);
-            if (product != null)
-            {
-                _context.Products.Remove(product);
-                await _context.SaveChangesAsync();
-            }*/
             await _context.Products
                 .Where(b => b.Id == id)
                 .ExecuteDeleteAsync();
 
             return id;
+        }
+        public async Task<ProductEntity?> GetById(Guid id)
+        {
+            return await _context.Products
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
+        public async Task<List<ProductEntity>> GetByFilterTitle(string title)
+        {
+            var query = _context.Products.AsNoTracking();
+
+            if (!string.IsNullOrEmpty(title))
+            {
+                query = query.Where(t => t.Title.Contains(title));
+            }
+
+            return await query.ToListAsync();
         }
     }
 }

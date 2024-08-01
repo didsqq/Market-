@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store\\Store.csproj": {}
+    "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store\\Store.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Application\\Store.Application.csproj": {
+    "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Application\\Store.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Application\\Store.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Application\\Store.Application.csproj",
         "projectName": "Store.Application",
-        "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Application\\Store.Application.csproj",
-        "packagesPath": "C:\\Users\\Адель\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Application\\obj\\",
+        "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Application\\Store.Application.csproj",
+        "packagesPath": "C:\\Users\\Господин\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Адель\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Господин\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\Store.Core.csproj": {
-                "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\Store.Core.csproj"
+              "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\Store.Core.csproj": {
+                "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\Store.Core.csproj"
               },
-              "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\Store.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\Store.DataAccess.csproj"
+              "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\Store.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\Store.DataAccess.csproj"
               }
             }
           }
@@ -72,17 +76,21 @@
         }
       }
     },
-    "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\Store.Core.csproj": {
+    "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\Store.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\Store.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\Store.Core.csproj",
         "projectName": "Store.Core",
-        "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\Store.Core.csproj",
-        "packagesPath": "C:\\Users\\Адель\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\obj\\",
+        "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\Store.Core.csproj",
+        "packagesPath": "C:\\Users\\Господин\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Адель\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Господин\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -149,17 +157,21 @@
         }
       }
     },
-    "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\Store.DataAccess.csproj": {
+    "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\Store.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\Store.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\Store.DataAccess.csproj",
         "projectName": "Store.DataAccess",
-        "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\Store.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Адель\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\Store.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Господин\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Адель\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Господин\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,8 +186,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\Store.Core.csproj": {
-                "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Core\\Store.Core.csproj"
+              "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\Store.Core.csproj": {
+                "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Core\\Store.Core.csproj"
               }
             }
           }
@@ -230,17 +242,21 @@
         }
       }
     },
-    "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store\\Store.csproj": {
+    "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store\\Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store\\Store.csproj",
+        "projectUniqueName": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store\\Store.csproj",
         "projectName": "Store",
-        "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store\\Store.csproj",
-        "packagesPath": "C:\\Users\\Адель\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store\\obj\\",
+        "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store\\Store.csproj",
+        "packagesPath": "C:\\Users\\Господин\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Адель\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Господин\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -255,11 +271,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Application\\Store.Application.csproj": {
-                "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.Application\\Store.Application.csproj"
+              "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Application\\Store.Application.csproj": {
+                "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.Application\\Store.Application.csproj"
               },
-              "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\Store.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Адель\\Desktop\\Store\\Backend\\Store.DataAccess\\Store.DataAccess.csproj"
+              "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\Store.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Господин\\Desktop\\Market-\\Backend\\Store.DataAccess\\Store.DataAccess.csproj"
               }
             }
           }
