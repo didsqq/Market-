@@ -16,6 +16,8 @@ builder.Services.AddDbContext<StoreDbContext>(
     });
 
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IImageService, ImageService>();
+builder.Services.AddScoped<IImagesRepository, ImagesRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();

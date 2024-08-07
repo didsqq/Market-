@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Store.Core.Models;
 using Store.DataAccess.Entities;
+using Store.DataAccess.Mappings;
 
 namespace Store.DataAccess.Repositories
 {
@@ -18,7 +19,7 @@ namespace Store.DataAccess.Repositories
                 .AsNoTracking()
                 .ToListAsync();
             var products = productEntities
-                .Select(b => Product.Create(b.Id, b.Title, b.Description, b.Price, b.ImageId).Value)
+                .Select(b => Product.Create(b.Id, b.Title, b.Description, b.Price).Value)
                 .ToList();
 
             return products;
@@ -31,8 +32,7 @@ namespace Store.DataAccess.Repositories
                 Id = product.Id,
                 Title = product.Title,
                 Description = product.Description,
-                Price = product.Price,
-                ImageId = product.ImageId
+                Price = product.Price
             };
 
             await _context.Products.AddAsync(productEntity);
@@ -59,22 +59,24 @@ namespace Store.DataAccess.Repositories
 
             return id;
         }
-        public async Task<ProductEntity?> GetById(Guid id)
+        public async Task<Product?> GetById(Guid id)
         {
-            return await _context.Products
+            var entityProducts = await _context.Products
                 .AsNoTracking()
                 .FirstOrDefaultAsync(p => p.Id == id);
-        }
-        public async Task<List<ProductEntity>> GetByFilterTitle(string title)
-        {
-            var query = _context.Products.AsNoTracking();
 
-            if (!string.IsNullOrEmpty(title))
-            {
-                query = query.Where(t => t.Title.Contains(title));
-            }
-
-            return await query.ToListAsync();
+            return entityProducts.ToDomainProduct();
         }
+        /*        public async Task<List<ProductEntity>> GetByFilterTitle(string title)
+                {
+                    var query = _context.Products.AsNoTracking();
+
+                    if (!string.IsNullOrEmpty(title))
+                    {
+                        query = query.Where(t => t.Title.Contains(title));
+                    }
+
+                    return await query.ToListAsync();
+                }*/
     }
 }

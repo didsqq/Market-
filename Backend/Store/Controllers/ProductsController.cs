@@ -10,9 +10,11 @@ namespace Store.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productsService;
-        public ProductsController(IProductService productService)
+        private readonly IImageService _imageService;
+        public ProductsController(IProductService productService, IImageService imageService)
         {
             _productsService = productService;
+            _imageService = imageService;
         }
         [HttpGet]
         public async Task<ActionResult<List<ProductsResponse>>> GetProducts()
@@ -26,19 +28,25 @@ namespace Store.Controllers
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateProduct([FromBody] ProductsRequest request)
         {
-            /*            var (product, error) = Product.Create(
-                Guid.NewGuid(),
-                request.Title,
-                request.Description,
-                request.Price);
-
-            if (!string.IsNullOrEmpty(error))
-            {
-                return BadRequest(error);
-            }*/
             var product = Product.Create(Guid.NewGuid(), request.Title, request.Description, request.Price);
 
+            if (product.IsFailure)
+            {
+                return BadRequest(product.Error);
+            }
+
+            var image = Image.Create(Guid.NewGuid(), "123", product.Value);
+
+            if (image.IsFailure)
+            {
+                return BadRequest(image.Error);
+            }
+
+            product.Value.SetImage(image.Value);
+
             var productId = await _productsService.CreateProduct(product.Value);
+
+            await _imageService.CreateImage(image.Value);
 
             return Ok(productId);
         }

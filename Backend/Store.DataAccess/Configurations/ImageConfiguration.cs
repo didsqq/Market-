@@ -12,8 +12,7 @@ namespace Store.DataAccess.Configuration
 
             builder
                 .HasOne(a => a.Product)
-                .WithOne(c => c.Image)
-                .HasForeignKey<ImageEntity>(i => i.ProductId);
+                .WithOne(c => c.Image);
 
             builder.Property(b => b.FileName)
                 .IsRequired();
