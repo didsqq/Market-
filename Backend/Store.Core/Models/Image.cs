@@ -9,7 +9,7 @@ namespace Store.Core.Models
             Id = id;
             FileName = fileName;
             Product = product;
-            ProductId = id;
+            ProductId = product.Id;
         }
 
         public Guid Id { get; }

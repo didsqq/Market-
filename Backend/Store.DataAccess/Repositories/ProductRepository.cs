@@ -13,17 +13,40 @@ namespace Store.DataAccess.Repositories
             _context = context;
         }
 
+        /*        public async Task<List<Product>> Get()
+                {
+                    var productEntities = await _context.Products
+                        .AsNoTracking()
+                        .ToListAsync();
+                    var products = productEntities
+                        .Select(b => Product.Create(b.Id, b.Title, b.Description, b.Price).Value)
+                        .ToList();
+
+                    return products;
+                }*/
         public async Task<List<Product>> Get()
         {
             var productEntities = await _context.Products
+                .Include(p => p.Image) // Включаем связанные изображения
                 .AsNoTracking()
                 .ToListAsync();
+
             var products = productEntities
-                .Select(b => Product.Create(b.Id, b.Title, b.Description, b.Price).Value)
+                .Select(b =>
+                {
+                    var product = Product.Create(b.Id, b.Title, b.Description, b.Price).Value;
+                    if (b.Image != null)
+                    {
+                        var image = Image.Create(b.Image.Id, b.Image.FileName, product);
+                        product.SetImage(image.Value);
+                    }
+                    return product;
+                })
                 .ToList();
 
             return products;
         }
+
 
         public async Task<Guid> Create(Product product)
         {
@@ -32,10 +55,12 @@ namespace Store.DataAccess.Repositories
                 Id = product.Id,
                 Title = product.Title,
                 Description = product.Description,
-                Price = product.Price
+                Price = product.Price,
+                Image = product.Image.ToEntityImage()
             };
 
             await _context.Products.AddAsync(productEntity);
+            await _context.Images.AddAsync(productEntity.Image);
             await _context.SaveChangesAsync();
 
             return productEntity.Id;

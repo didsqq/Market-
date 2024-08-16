@@ -15,8 +15,9 @@ export const Products = ({products, handleDelete, handleOpen}: Props) => {
                 <Card 
                 key={product.id} 
                 title={<CardTitle title={product.title} price={product.price}/>} 
-                bordered={false}>
-                    <p>{product.description}</p>
+                bordered={false}>   
+                <img src={product.filename} alt={product.title} style={{ width: "200px", height: "200px" }} />
+                <p>{product.description}</p>
                     <div className="card_buttons">
                         <Button onClick={() => handleOpen(product)} style={{ flex: 1 }}>Edit</Button>
                         <Button onClick={() => handleDelete(product.id)} danger style={{ flex: 1 }}>Delete</Button>

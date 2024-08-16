@@ -12,6 +12,7 @@ export default function ProductsPage(){
         title: "",
         description: "",
         price: 1,
+        filename: "",
     } as Product;
 
     const [values, setvalues] = useState<Product>(defaultValues);
@@ -23,9 +24,9 @@ export default function ProductsPage(){
 
     useEffect(() => {
         const getProducts = async () => {
-            const books = await getAllProducts();
+            const products = await getAllProducts();
             setLoading(false);
-            setProducts(books);
+            setProducts(products);
         };
 
         getProducts();

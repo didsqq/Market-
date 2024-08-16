@@ -21,7 +21,7 @@ namespace Store.Controllers
         {
             var products = await _productsService.GetAllProducts();
 
-            var response = products.Select(b => new ProductsResponse(b.Id, b.Title, b.Description, b.Price));
+            var response = products.Select(b => new ProductsResponse(b.Id, b.Title, b.Description, b.Price, b.Image.FileName));
 
             return Ok(response);
         }
@@ -35,7 +35,7 @@ namespace Store.Controllers
                 return BadRequest(product.Error);
             }
 
-            var image = Image.Create(Guid.NewGuid(), "123", product.Value);
+            var image = Image.Create(Guid.NewGuid(), "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png", product.Value);
 
             if (image.IsFailure)
             {
@@ -45,8 +45,6 @@ namespace Store.Controllers
             product.Value.SetImage(image.Value);
 
             var productId = await _productsService.CreateProduct(product.Value);
-
-            await _imageService.CreateImage(image.Value);
 
             return Ok(productId);
         }

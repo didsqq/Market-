@@ -14,5 +14,17 @@ namespace Store.DataAccess.Mappings
 
             return image;
         }
+        public static ImageEntity ToEntityImage(this Image image)
+        {
+            var imageEntity = new ImageEntity
+            {
+                Id = image.Id,
+                FileName = image.FileName,
+                ProductId = image.ProductId,
+                Product = image.Product.ToEntity()
+            };
+
+            return imageEntity;
+        }
     }
 }

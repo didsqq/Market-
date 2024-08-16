@@ -3,5 +3,6 @@
     public record ProductsRequest(
         string Title,
         string Description,
-        decimal Price);
+        decimal Price,
+        string Filename);
 }
