@@ -35,7 +35,7 @@ namespace Store.Controllers
                 return BadRequest(product.Error);
             }
 
-            var image = Image.Create(Guid.NewGuid(), "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png", product.Value);
+            var image = Image.Create(Guid.NewGuid(), request.Filename, product.Value);
 
             if (image.IsFailure)
             {

@@ -29,15 +29,17 @@ export const CreateUpdateProduct = ({
     const [title, setTitle] = useState<string>("");
     const [description, setDescription] = useState<string>("");
     const [price, setPrice] = useState<number>(1);
+    const [filename, setFilename] = useState<string>("");
 
     useEffect(() => {
         setTitle(values.title);
         setDescription(values.description);
         setPrice(values.price);
+        setFilename(values.filename);
     }, [values]);
 
     const handleOnOk = async () => {
-        const productRequest = {title, description, price};
+        const productRequest = {title, description, price, filename};
 
         mode == Mode.Create ? handleCreate(productRequest) : handleUpdate(values.id,productRequest);
     }
@@ -60,6 +62,11 @@ export const CreateUpdateProduct = ({
                     onChange={(e) => setDescription(e.target.value)}
                     autoSize={{minRows: 3, maxRows:3}}
                     placeholder="Описание"
+                />
+                <Input
+                    value={filename}
+                    onChange={(e) => setFilename(e.target.value)}
+                    placeholder="Ссылка на изображение"
                 />
                 <Input
                     value={price}

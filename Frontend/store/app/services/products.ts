@@ -2,6 +2,7 @@ export interface ProductRequest {
     title: string;
     description: string;
     price: number;
+    filename: string;
 }
 
 export const getAllProducts = async () => {
